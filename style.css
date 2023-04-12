@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3 (4fr);
+  grid-template-rows: 3 (4fr);
+  grid-template-areas:
+    ". . ."
+    ". h1 ."
+    ". . .";
+}
+
+h1 {
+  grid-area: h1;
+  color: #3d090f;
+  font-size: 40pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-spacing: 0.5em;
+  line-height: 4em;
+  background-color: antiquewhite;
+  border: 16px solid #8d6738;
+  border-radius: 2px;
+}
+
+/* Darkred color: #3d090f */
+/* Gold color: #8d6738 */
