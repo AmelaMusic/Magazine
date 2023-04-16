@@ -1,21 +1,46 @@
+/* Darkred color: #3d090f */
+/* Gold color: #8d6738 */
+
 body {
-  background-color: black;
+  /* background-color: black; */
   margin: 0;
   padding: 0;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 3 (4fr);
-  grid-template-rows: 3 (4fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
-    ". . ."
-    ". h1 ."
-    ". . .";
+    "img img img"
+    "h1 h1 h1"
+    "start start start"
+    "s20 s20 s20"
+    "s30-40 s30-40 s30-40"
+    "s50-60 s50-60 s50-60"
+    "s70 s70 s70"
+    "s80 s80 s80"
+    "s21 s21 s21";
 }
 
-h1 {
+.img {
+  grid-area: img;
+  background-color: #cdc7b7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Front page */
+.front-page {
   grid-area: h1;
+  background-color: black;
+  height: 720px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.title {
+  margin-top: 100px;
   color: #3d090f;
   font-size: 40pt;
   display: flex;
@@ -29,5 +54,73 @@ h1 {
   border-radius: 2px;
 }
 
-/* Darkred color: #3d090f */
-/* Gold color: #8d6738 */
+p {
+  color: white;
+}
+
+/* The start section */
+.start {
+  grid-area: start;
+  background-color: #0d0d0d;
+  height: 720px;
+}
+.start-headline {
+  color: white;
+  width: 1fr;
+  height: 1fr;
+}
+
+.start-text {
+  width: 600px;
+  height: 600px;
+}
+
+/* The 1920s section */
+.s20 {
+  grid-area: s20;
+  background-color: #121212;
+  height: 720px;
+}
+
+.s20-headline {
+  color: white;
+}
+
+.silent-film {
+  color: white;
+}
+
+/* The 1930s & 1940s section */
+.s30-40 {
+  grid-area: s30-40;
+  background-color: bisque;
+  height: 720px;
+}
+
+/* The 1950s & 1960s section */
+.s50-60 {
+  grid-area: s50-60;
+  background-color: #3d090f;
+  height: 720px;
+}
+
+/* The 1970s section */
+.s70 {
+  grid-area: s70;
+  background-color: cadetblue;
+  height: 720px;
+}
+
+/* The 1980s section*/
+.s80 {
+  grid-area: s80;
+  background-color: brown;
+  height: 720px;
+}
+
+/* 21st century section */
+.s21-century {
+  grid-area: s21;
+  background-color: blanchedalmond;
+  height: 720px;
+}
