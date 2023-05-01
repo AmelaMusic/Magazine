@@ -50,15 +50,14 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 760px;
-  border: 1000px;
+  height: 650px;
   border-color: #f2ede9;
   /* padding-left: 40px; */
   /* padding-right: 40px; */
 }
 
 .title {
-  font-family: anton;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin-top: 100px;
   color: #bd4444;
   font-size: 100pt;
@@ -66,7 +65,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  word-spacing: 6em;
+  word-spacing: 100px;
   line-height: 1em;
 }
 
@@ -101,7 +100,7 @@ p {
 
 .start-the {
   grid-area: the;
-  font-family: anton;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 150pt;
   color: #bd4444;
   display: flex;
@@ -116,7 +115,7 @@ p {
 
 .start-origins {
   grid-area: origins;
-  font-family: anton;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 150pt;
   color: #bd4444;
   display: flex;
@@ -146,6 +145,7 @@ p {
   color: #f2ede9;
   padding: 100px;
   width: 400px;
+  font-size: 10pt;
   height: auto;
   text-align: justify;
   /* text-justify: inter-word; */
@@ -193,7 +193,7 @@ p {
 
 .s20-silent {
   grid-area: silent;
-  font-family: anton;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 120pt;
   color: #bd4444;
   display: flex;
@@ -207,7 +207,7 @@ p {
 
 .s20-film {
   grid-area: film;
-  font-family: anton;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 120pt;
   color: #bd4444;
   display: flex;
@@ -225,7 +225,7 @@ p {
   font-size: 70px;
   display: flex;
   align-items: center;
-  margin-left: 380px;
+  margin-left: 400px;
   margin-top: 170px;
   letter-spacing: 2px;
   z-index: 2;
@@ -237,6 +237,7 @@ p {
   color: #f2ede9;
   width: 340px;
   height: auto;
+  font-size: 10pt;
   text-align: justify;
   /* text-justify: inter-word; */
   display: flex;
@@ -251,6 +252,7 @@ p {
   color: #f2ede9;
   width: 340px;
   height: auto;
+  font-size: 10pt;
   text-align: justify;
   /* text-justify: inter-word; */
   display: flex;
@@ -266,15 +268,269 @@ p {
 /* The 1930s & 1940s section */
 .s30-40 {
   grid-area: s30-40;
-  background-color: bisque;
+  background-color: #161616;
   height: 760px;
+  display: grid;
+  grid-template-columns: 420px repeat(2, 1fr);
+  grid-template-rows: 100px 1fr 110px 110px 110px 200px;
+  grid-template-areas:
+    "s30 . ."
+    "golden-img . ."
+    "golden-img golden-text women-img"
+    "golden-img golden-the golden-the"
+    "golden-img golden-golden golden-golden"
+    "golden-img golden-age golden-age"
+    "s40 . .";
+  box-sizing: border-box;
+}
+
+.golden-img {
+  grid-area: golden-img;
+  width: 400px;
+  height: auto;
+  margin-left: 20px;
+  position: relative;
+  z-index: 1; /* Lower z-index value */
+}
+
+.img-women {
+  grid-area: women-img;
+  width: 160px;
+  height: auto;
+  margin-top: 60px;
+  margin-left: 660px;
+  position: absolute;
+  margin-bottom: 100px;
+}
+
+.golden-s30 {
+  grid-area: s30;
+  color: #f2ede9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  margin-left: 400px; */
+  /*  margin-top: 170px; */
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  top: 20px;
+  left: 20px;
+}
+
+.golden-s40 {
+  grid-area: s40;
+  color: #f2ede9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 400px; */
+  /* margin-top: 170px; */
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+}
+
+.golden-the {
+  grid-area: golden-the;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 100pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: rtl;
+  margin-right: 20px;
+  letter-spacing: 6px;
+  margin-top: 150px;
+  /* width: 1fr; */
+  /* height: 1fr; */
+}
+
+.golden-golden {
+  grid-area: golden-golden;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 100pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: rtl;
+  margin-right: 20px;
+  letter-spacing: 6px;
+  margin-top: 150px;
+  /* width: 1fr; */
+  /* height: 1fr; */
+}
+
+.golden-age {
+  grid-area: golden-age;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 100pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: rtl;
+  margin-right: 20px;
+  letter-spacing: 6px;
+  margin-top: 150px;
+  /* width: 1fr; */
+  /* height: 1fr; */
+}
+
+.star {
+  color: #f2ede9;
+}
+
+.golden-text {
+  grid-area: golden-text;
+  color: #f2ede9;
+  font-size: 10pt;
+  width: 400px;
+  height: auto;
+  text-align: justify;
+  /* text-justify: inter-word; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 80px;
+  /* margin-top: 30px; */
 }
 
 /* The 1950s & 1960s section */
 .s50-60 {
   grid-area: s50-60;
-  background-color: #3d090f;
+  background-color: #161616;
   height: 760px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 50px repeat(1, 1fr);
+  grid-template-rows: 112px 112px 112px 1fr 1fr;
+  grid-template-areas:
+    "lights . . . s50"
+    "camera . . . hollywood-img"
+    "action s50-60-text . s50-60-red hollywood-img"
+    ". s50-60-text . s50-60-red hollywood-img"
+    "woman-img s50-60-text . s50-60-red s60";
+}
+
+.s50 {
+  grid-area: s50;
+  color: #f2ede9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 400px; */
+  /* margin-top: 170px; */
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  margin-top: 100px;
+  margin-right: 40px;
+}
+
+.s60 {
+  grid-area: s60;
+  color: #f2ede9;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 400px; */
+  /* margin-top: 170px; */
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  margin-top: 180px;
+  margin-right: 40px;
+}
+
+.hollywood-img {
+  grid-area: hollywood-img;
+  width: 500px;
+  height: auto;
+  margin-right: 40px;
+  /*   position: relative; */
+}
+
+.woman-img {
+  grid-area: woman-img;
+  width: 240px;
+  height: auto;
+  margin-right: 40px;
+  margin-left: 6px;
+}
+
+.lights {
+  grid-area: lights;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 80pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: ltr;
+  letter-spacing: 2px;
+  margin-left: 40px;
+}
+
+.camera {
+  grid-area: camera;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 80pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: ltr;
+  letter-spacing: 2px;
+  margin-left: 40px;
+}
+
+.action {
+  grid-area: action;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 80pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: ltr;
+  letter-spacing: 2px;
+  margin-left: 40px;
+}
+
+.s50-60-text {
+  grid-area: s50-60-text;
+  color: #f2ede9;
+  font-size: 10pt;
+  width: 300px;
+  height: auto;
+  text-align: justify;
+  /* text-justify: inter-word; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 80px; */
+  /*  margin-top: 200px; */
+}
+
+.s50-60-red {
+  grid-area: s50-60-red;
+  background-color: #bd4444;
+  height: 360px;
+  margin-top: 80px;
 }
 
 /* The 1970s section */
