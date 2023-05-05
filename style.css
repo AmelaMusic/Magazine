@@ -12,6 +12,12 @@
   src: url(fonts/abril.ttf);
 }
 
+@font-face {
+  font-family: "golden-age";
+  src: url(fonts/golden-age.ttf);
+}
+
+
 body {
   background-color: black;
   margin: 0;
@@ -534,10 +540,150 @@ p {
 }
 
 /* The 1970s section */
-.s70 {
+
+/* .s70 {
   grid-area: s70;
   background-color: cadetblue;
   height: 760px;
+} */
+
+.s70 {
+  grid-area: s70;
+  justify-content: flex-end;
+  background-color: #161616;
+  height: 760px;
+  display: grid;
+  grid-template-columns: 800px repeat(2, 1fr);
+  grid-template-rows: 100px 1fr 110px 110px 110px 200px;
+  grid-template-areas:
+    "s30 . ."
+    "golden-img . ."
+    "golden-img golden-the golden-the"
+    "golden-img golden-golden golden-golden"
+    "golden-img golden-age golden-age"
+    "s40 . .";
+  box-sizing: border-box;
+}
+
+.cinema-img {
+  grid-area: golden-img;
+  width: 550px;
+  height: auto;
+  /* margin-left: 20px; */
+  object-fit: contain;
+  position: relative;
+  z-index: 1; /* Lower z-index value */
+  align-self: center;
+  justify-self: center;
+  top: 25px;
+  margin-left: -20px;
+}
+
+
+.hollywood-19 {
+  grid-area: s30;
+  color: #f2ede9;
+  font-family: "golden-age";
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  margin-left: 400px; */
+  /*  margin-top: 170px; */
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  top: -20px;
+  left: -280px;
+}
+
+.hollywood-70 {
+  grid-area: s40;
+  color: #f2ede9;
+   font-family: "golden-age";
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 400px; */
+  /* margin-top: 170px; */
+  letter-spacing: 2px;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  bottom: -70px;
+  left: 205px;
+}
+
+.hollywood-new {
+  grid-area: golden-the;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 110pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: rtl;
+  margin-right: -485px;
+  letter-spacing: 6px;
+  margin-top: 110px;
+  /* width: 1fr; */
+  /* height: 1fr; */
+}
+
+.hollywood-holly {
+  grid-area: golden-golden;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 110pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: rtl;
+  margin-right: -485px;
+  letter-spacing: 6px;
+  margin-top: 110px;
+  /* width: 1fr; */
+  /* height: 1fr; */
+}
+
+.hollywood-wood {
+  grid-area: golden-age;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 110pt;
+  color: #bd4444;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  direction: rtl;
+  z-index: 2;
+  margin-right: -485px;
+  letter-spacing: 6px;
+  margin-top: 110px;
+  /* width: 1fr; */
+  /* height: 1fr; */
+}
+
+.star {
+  color: #f2ede9;
+}
+
+
+.hollywood-text {
+  grid-area: golden-text;
+  color: #f2ede9;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10pt;
+  width: 480px;
+  height: auto;
+  text-align: justify;
+  /* text-justify: inter-word; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 125px;
+  margin-top: -1150px;
 }
 
 /* The 1980s section*/
