@@ -1,6 +1,3 @@
-/* Darkred color: #3d090f */
-/* Gold color: #8d6738 */
-
 /* Fonts */
 @font-face {
   font-family: "anton";
@@ -23,7 +20,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #161616;
   margin: 0;
   padding: 0;
 }
@@ -42,16 +39,8 @@ body {
     "s80 s80 s80"
     "today today today"
     "infographic infographic infographic";
-  row-gap: 40px;
+  row-gap: 220px;
 }
-
-/* .img { */
-/*   grid-area: img; */
-/*   background-color: #cdc7b7; */
-/*   display: flex; */
-/*   align-items: center; */
-/*   justify-content: center; */
-/* } */
 
 /* Front page */
 .front-page {
@@ -63,8 +52,6 @@ body {
   text-align: center;
   height: 650px;
   border-color: #f2ede9;
-  /* padding-left: 40px; */
-  /* padding-right: 40px; */
 }
 
 .title {
@@ -103,10 +90,10 @@ p {
   grid-template-columns: 500px 100px 1fr;
   grid-template-rows: 1fr 190px 190px 1fr;
   grid-template-areas:
-    "start-img sred ."
+    "start-img . ."
     "start-img start-text the"
-    "start-img origins origins"
-    "start-img th19 th19";
+    "start-img sred origins"
+    "sred2 th19 th19";
 }
 
 .start-the {
@@ -118,7 +105,7 @@ p {
   align-items: center;
   text-align: right;
   direction: rtl;
-  margin-right: 20px;
+  margin-right: 60px;
   letter-spacing: 6px;
   /* width: 1fr; */
   /* height: 1fr; */
@@ -134,7 +121,7 @@ p {
   /* justify-content: flex-end; */
   text-align: right;
   direction: rtl;
-  margin-right: 20px;
+  margin-right: 60px;
   letter-spacing: 6px;
 }
 
@@ -147,7 +134,7 @@ p {
   align-items: center;
   text-align: right;
   direction: rtl;
-  margin-right: 20px;
+  margin-right: 60px;
   letter-spacing: 2px;
 }
 
@@ -171,10 +158,20 @@ p {
 .sred {
   box-sizing: border-box;
   grid-area: sred;
-  width: 40px;
-  height: 200px;
+  width: 36px;
+  height: 260px;
   background-color: #bd4444;
-  position: relative;
+  /* position: relative; */
+  margin-top: -260px;
+}
+
+.sred2 {
+  grid-area: sred2;
+  width: 190px;
+  height: 36px;
+  background-color: #bd4444;
+  margin-top: 126px;
+  margin-left: 240px;
 }
 
 /* The 1920s section */
@@ -183,15 +180,15 @@ p {
   background-color: #161616;
   height: 760px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 60px;
   grid-template-rows: 20px 190px 160px 1fr 1fr 1fr;
   grid-template-areas:
-    " . . s20-red"
-    "silent s20-s20 s20-img"
-    "film s20-s20 s20-img"
-    "s20-text . s20-img"
-    ". s20-text2 img"
-    ". s20-text2 img";
+    " . . . ."
+    "silent s20-s20 s20-img ."
+    "film s20-s20 s20-img s20-red"
+    "s20-text . s20-img ."
+    ". s20-text2 . s20-red2"
+    ". s20-text2 . .";
 }
 
 .s20-img {
@@ -276,6 +273,19 @@ p {
 .s20-red {
   grid-area: s20-red;
   background-color: #bd4444;
+  width: 220px;
+  height: 36px;
+  margin-top: -146px;
+  margin-left: -310px;
+}
+
+.s20-red2 {
+  grid-area: s20-red2;
+  background-color: #bd4444;
+  width: 36px;
+  height: 190px;
+  margin-left: -499px;
+  margin-top: -40px;
 }
 
 /* The 1930s & 1940s section */
@@ -348,7 +358,7 @@ p {
   z-index: 2;
   position: relative;
   margin-top: 20px;
-  margin-left: 190px;
+  margin-left: 180px;
 }
 
 .golden-the {
@@ -543,15 +553,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -80px;
-  /*  margin-top: 200px; */
+  margin-left: -100px;
+  margin-top: -20px;
 }
 
 .s50-60-red {
   grid-area: s50-60-red;
   background-color: #bd4444;
-  height: 360px;
-  margin-top: 80px;
+  width: 36px;
+  height: 300px;
+  margin-top: 88px;
+  margin-left: 14px;
 }
 
 /* The 1970s section */
@@ -699,18 +711,7 @@ p {
   margin-top: -1150px;
 }
 
-/*  */
-/*  */
-/*  */
-/*  */
 /* The 1980s section*/
-
-/* .s80 {
-  grid-area: s80;
-  background-color: brown;
-  height: 760px;
-} */
-
 .s80 {
   grid-area: s80;
   height: 760px;
@@ -794,7 +795,7 @@ p {
   align-items: center;
   text-align: right;
   /* direction: rtl; */
-  margin-right: 590px;
+  margin-right: 620px;
   margin-top: -40px;
 }
 
@@ -811,19 +812,17 @@ p {
   /* display: flex; */
   align-items: center;
   text-align: right;
-  margin-right: 424px;
+  margin-right: 454px;
   margin-top: 75px;
 }
 
 .s80-wood {
   grid-area: heading;
   z-index: 2;
-  margin-left: 182px;
+  margin-left: 152px;
   color: #bd4444;
-
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 110pt;
-  color: #bd4444;
   display: flex;
   align-items: center;
   text-align: right;
@@ -838,7 +837,7 @@ p {
   font-size: 9pt;
   width: 520px;
   height: auto;
-  margin-left: 180px;
+  margin-left: 150px;
   margin-top: -100px;
   text-align: justify;
 }
@@ -850,11 +849,22 @@ p {
   height: 760px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 300px 200px;
+  grid-template-rows: 260px 256px 200px;
   grid-template-areas:
-    ". img-jo . img-ker today2"
+    ". img-jo ghostface img-ker today2"
     ". img-jo today-headline img-ker ."
     "today1 img-jo today-text img-ker .";
+}
+
+.ghostface {
+  grid-area: ghostface;
+  width: 180px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 140px;
+  margin-top: 70px;
 }
 
 .joker1 {
@@ -874,21 +884,27 @@ p {
 .today1 {
   grid-area: today1;
   color: #bd4444;
+  font-size: 30pt;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: justify;
+  margin-right: -120px;
+  margin-top: -86px;
 }
 
 .today2 {
   grid-area: today2;
   color: #bd4444;
+  font-size: 30pt;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: justify;
+  margin-left: -120px;
+  margin-top: 130px;
 }
 
 .today-headline {
@@ -899,18 +915,20 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: 100px; */
+  margin-top: 170px;
   letter-spacing: 6px;
 }
 
 .today-text {
   grid-area: today-text;
+  font-family: didot;
+  font-size: 9pt;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: justify;
   width: 600px;
-  margin-top: -116px;
+  /* margin-top: -80px; */
 }
 
 /* Infographic */
